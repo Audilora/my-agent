@@ -41,6 +41,8 @@ Learning a language is not about memorizing—it is about recognizing patterns, 
 
 ## Video
 
+https://youtu.be/_TAqvGeKT-0
+
 ## Architecture
 
 ```mermaid
