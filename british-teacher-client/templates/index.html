@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audilora</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/macawimage.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="app-grid" role="main">
+            <!-- Left indicator panel -->
+            <aside class="side-panel" aria-hidden="false">
+                <div class="sidebar-header">
+                    <div class="sidebar-brand">
+                        <div class="logo-wrapper">
+                            <img src="{{ url_for('static', filename='img/macawimage.png') }}" alt="Audilora logo">
+                        </div>
+                        <div class="app-logo">Audilora</div>
+                    </div>
+                </div>
+                <div class="techniques">
+                    <div class="tech-item"><span class="dot green"></span> Linking</div>
+                    <div class="tech-item"><span class="dot yellow"></span> Blending</div>
+                    <div class="tech-item"><span class="dot blue"></span> Assimilation</div>
+                    <div class="tech-item"><span class="dot red"></span> Reductions</div>
+                </div>
+            </aside>
+
+            <div class="container" role="main">
+            <!-- Controls + Generated Text -->
+            <div class="top-controls">
+                <div class="controls-left">
+                    <label for="categorySelect">Categorías</label>
+                    <select id="categorySelect">
+                        <option value="daily life">Vida diaria</option>
+                        <option value="shopping">Compras</option>
+                        <option value="food">Comida</option>
+                        <option value="travel">Viajes</option>
+                        <option value="education">Educación</option>
+                    </select>
+                    <button id="generateTextBtn" class="control-btn">Texto</button>
+                    <button id="playAudioBtn" class="control-btn" disabled>Audio</button>
+                </div>
+            </div>
+
+            <!-- Generated text area -->
+            <section id="generatedArea" class="generated-area" aria-live="polite">
+                <div id="generatedBox" class="generated-box">
+                    <em>Selecciona la categoría y presiona texto para empezar</em>
+                </div>
+            </section>
+
+            <!-- Chat Area -->
+            <div class="chat-container" role="region" aria-label="Chat conversation area">
+                <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-atomic="false"
+                    aria-label="Chat messages">
+                    <div class="welcome-message" role="status">
+                        Pregúntale al profesor si tienes dudas
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container" role="form" aria-label="Formulario de mensaje">
+                <label for="messageInput" class="sr-only">Escribe tu mensaje</label>
+                <input type="text" id="messageInput" class="message-input" placeholder="Escribe tu mensaje..."
+                    autocomplete="off" aria-label="Campo de mensaje" aria-describedby="inputHelp" tabindex="1"
+                    maxlength="10000">
+                <button id="sendBtn" class="send-btn" title="Enviar mensaje" aria-label="Enviar mensaje" tabindex="2">
+                    <span aria-hidden="true">➤</span>
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer" role="contentinfo">
+                <span id="inputHelp">El contenido generado por IA puede contener errores</span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
