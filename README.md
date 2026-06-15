@@ -47,7 +47,6 @@ https://youtu.be/_TAqvGeKT-0
 
 ```mermaid
 flowchart LR
-flowchart LR
     Browser["User Browser"] -->|HTTP| Flask["Flask + Python\n(app.py)"]
 
     Flask -->|Calls| Foundry["Microsoft Foundry\n(Conversational Agent)"]
