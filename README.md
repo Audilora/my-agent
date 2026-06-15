@@ -47,13 +47,20 @@ https://youtu.be/_TAqvGeKT-0
 
 ```mermaid
 flowchart LR
+flowchart LR
     Browser["User Browser"] -->|HTTP| Flask["Flask + Python\n(app.py)"]
+
     Flask -->|Calls| Foundry["Microsoft Foundry\n(Conversational Agent)"]
     Flask -->|Calls| Speech["Azure OpenAI / Speech\n(Voice Synthesis)"]
+
+    Foundry -->|Retrieves knowledge| FoundryIQ["Foundry IQ\n(Knowledge Base / Grounding)"]
+
     Flask -->|Uses for development| Copilot["GitHub Copilot / Copilot SDK"]
     Copilot -->|Code and documentation assistance| Flask
+
     Foundry -->|AI Responses| Flask
     Speech -->|Audio File / URL| Flask
+
     Flask -->|Renders UI| Browser
 ```
 
