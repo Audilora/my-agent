@@ -37,6 +37,8 @@ Aprender un idioma no es memorizarlo: es reconocer patrones, escuchar, repetir y
 
 ## Video
 
+https://youtu.be/_TAqvGeKT-0
+
 ## Arquitectura 
 
 ```mermaid
@@ -54,6 +56,29 @@ flowchart LR
 Audilora usa Microsoft Foundry como motor principal del agente conversacional. El backend de Flask envía prompts al agente y recibe respuestas estructuradas que luego se muestran en la UI. La síntesis de voz se realiza con Azure OpenAI / Speech, generando audio a partir del texto producido.
 
 Durante el desarrollo se empleó GitHub Copilot para acelerar la implementación, refactorizar el código y documentar flujos. 
+
+# 🚀 Guía Rápida
+
+## Instalación
+
+```bash
+cd my-agent
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+pip install -r british-teacher-client/requirements.txt
+```
+
+## Ejecutar
+
+```bash
+cd british-teacher-client
+python app.py
+```
+
+Abre el navegador en: `http://127.0.0.1:5000`
+
+## En VS Code
+Haz clic derecho en `british-teacher-client/agent_client.py` → "Abrir en terminal integrada" → y escribir `python app.py`
 
 ## Miembros
 
