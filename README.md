@@ -62,6 +62,19 @@ python -m venv .venv
 pip install -r british-teacher-client/requirements.txt
 ```
 
+### Configuration
+
+Create a `.env` file in `british-teacher-client/` with your Azure credentials.
+
+```env
+AGENT_ENDPOINT=https://your-azure-foundry-agent-endpoint/v1/responses
+AZURE_SPEECH_KEY=your_speech_key_here
+AZURE_SPEECH_REGION=your_speech_region_here
+```
+
+- Replace `your-azure-foundry-agent-endpoint` with your Microsoft Foundry agent endpoint
+- Get your speech key and region from Azure Speech service
+
 ### Run
 
 ```bash
