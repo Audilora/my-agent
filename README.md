@@ -51,6 +51,30 @@ Audilora uses Microsoft Foundry as the core engine behind the conversational age
 
 During development, GitHub Copilot was used to accelerate implementation, refactor code, and document workflows.
 
+## Quick Start
+
+### Installation
+
+```bash
+cd my-agent
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+pip install -r british-teacher-client/requirements.txt
+```
+
+### Run
+
+```bash
+cd british-teacher-client
+python app.py
+```
+
+Open in browser: `http://127.0.0.1:5000`
+
+### VS Code
+
+Right-click on `british-teacher-client/app.py` → "Open in Integrated Terminal" → `python app.py`
+
 ## Members
 
 * [mvalenzuelapenagos@gmail.com](mailto:mvalenzuelapenagos@gmail.com)
