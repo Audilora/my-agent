@@ -77,16 +77,13 @@ AZURE_SPEECH_REGION=your_speech_region_here
 
 ### Run
 
+Right-click on `british-teacher-client/agent_client.py` and "Open in Integrated Terminal"
+
 ```bash
-cd british-teacher-client
 python app.py
 ```
 
 Open in browser: `http://127.0.0.1:5000`
-
-### VS Code
-
-Right-click on `british-teacher-client/app.py` → "Open in Integrated Terminal" → `python app.py`
 
 ## Members
 
