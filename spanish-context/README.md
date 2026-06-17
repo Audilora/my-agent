@@ -57,7 +57,7 @@ Audilora usa Microsoft Foundry como motor principal del agente conversacional. E
 
 Durante el desarrollo se empleó GitHub Copilot para acelerar la implementación, refactorizar el código y documentar flujos. 
 
-# 🚀 Guía Rápida
+# Inicio rápido
 
 ## Instalación
 
@@ -68,17 +68,33 @@ python -m venv .venv
 pip install -r british-teacher-client/requirements.txt
 ```
 
+## Configuración
+
+Crea un archivo `.env` dentro de `british-teacher-client/` con tus credenciales de Azure.
+
+```env
+AGENT_ENDPOINT=https://tu-endpoint-del-agente-de-azure-foundry/v1/responses
+AZURE_SPEECH_KEY=tu_clave_de_speech_aqui
+AZURE_SPEECH_REGION=tu_region_de_speech_aqui
+```
+
+* Reemplaza `tu-endpoint-del-agente-de-azure-foundry` con el endpoint de tu agente de Microsoft Foundry.
+* Obtén la clave (*Speech Key*) y la región desde el servicio Azure Speech.
+
 ## Ejecutar
+
+Haz clic derecho sobre `british-teacher-client/agent_client.py` y selecciona **"Abrir en Terminal Integrada"**.
 
 ```bash
 cd british-teacher-client
 python app.py
 ```
 
-Abre el navegador en: `http://127.0.0.1:5000`
+Abre en el navegador:
 
-## En VS Code
-Haz clic derecho en `british-teacher-client/agent_client.py` → "Abrir en terminal integrada" → y escribir `python app.py`
+```text
+http://127.0.0.1:5000
+```
 
 ## Miembros
 
